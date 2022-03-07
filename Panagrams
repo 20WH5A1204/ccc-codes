@@ -1,0 +1,12 @@
+def Check_Pangram(arg):
+    if len(set('abcdefghijklmnopqrstuvwxyz')-set(arg.lower()))==0:
+        return True
+    
+    return False
+
+user_str = input()
+
+if(Check_Pangram(user_str)):
+    print("pangram")
+else:
+    print("not pangram")
