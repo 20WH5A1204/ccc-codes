@@ -1,0 +1,11 @@
+l = int(input())
+arr = list(map(int,input().split()))
+num = int(input())
+diff = int(input())
+n = len(arr)
+count = 0
+for i in range(0, n):
+    if (abs(num-arr[i])<=diff):
+        count+=1
+        
+print(count)
