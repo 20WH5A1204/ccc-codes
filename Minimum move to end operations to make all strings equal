@@ -1,0 +1,26 @@
+import sys
+def minimunMoves(arr, n):
+ 
+    ans = sys.maxsize
+    for i in range(n):
+ 
+        curr_count = 0
+        for j in range(n):
+ 
+            tmp = arr[j] + arr[j]
+           
+            index = tmp.find(arr[i])
+       
+            if(index==len(arr[i])):
+               return -1
+ 
+            curr_count += index
+ 
+        ans = min(curr_count, ans)
+ 
+    return ans
+if __name__ == "__main__":
+     
+    arr = ["molzv", "lzvmo"]
+    n = len(arr)
+    print( minimunMoves(arr, n))
