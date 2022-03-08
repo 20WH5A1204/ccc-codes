@@ -1,0 +1,21 @@
+class Solution:
+    def minTime(self, a, b, n):
+    # Your code goes here
+        o=0
+        s=0
+        for i in range(n):
+            if i%2==0:
+                o+=a[i]
+                s+=b[i]
+            else:
+                s+=a[i]
+                o+=b[i]
+           
+        l=min(o,s)
+        return l
+   
+n = int(input())
+a = [int(x) for x in input().strip().split()]
+b = [int(x) for x in input().strip().split()]
+ob=Solution()
+print(ob.minTime(a, b, n))
